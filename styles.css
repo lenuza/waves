@@ -67,6 +67,10 @@ footer {
 /*******wavy nav bar********/
 
 #item1 {
+    border-top-left-radius: 35em;
+    border-top-right-radius:  55em;
+    border-bottom-right-radius: 2em 5em;
+    border-bottom-left-radius: 2em 5em;
     transform: skew(-5deg);
     transform: skewY(-5deg); 
     text-align: right;
