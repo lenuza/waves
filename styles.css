@@ -62,3 +62,34 @@ footer {
     grid-area: footer;
     background-color: darkblue;
 }
+
+
+/*******wavy nav bar********/
+
+#item1 {
+    transform: skew(-5deg);
+    transform: skewY(-5deg); 
+    text-align: right;
+}
+#item2 {
+    transform: skewX(5deg);
+    transform: skewY(5deg); 
+}
+#item3 {
+    transform: skewX(-10deg);
+    transform: skewY(-5deg); 
+}
+#item4 {
+    transform: skewX( 10deg);
+    transform: skewY(5deg); 
+}
+#item5 {
+    transform: skewX( -15deg);
+    transform: skewY(-5deg); 
+}
+#item6 {
+    transform: skewX( 15deg);
+    transform: skewY(5deg); 
+}
+
+
