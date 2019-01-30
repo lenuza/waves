@@ -1,99 +1,150 @@
 html {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .wrapper {
-    background-color: lightblue;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 150px auto 50px;
-    grid-row-gap: 30px;
-    grid-template-areas: 
-        " header header header header header header "
-        " main main main . aside aside"
-        " footer footer footer footer footer footer";
-
-    width: auto;
-    height: 95vh;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 150px auto 50px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    " header header header header header header "
+    " main main main . aside aside"
+    " footer footer footer footer footer footer";
+  width: auto;
+  height: 95vh;
 }
 
 header {
-    grid-area: header;
-    background-color: teal;
-    display: flex;
-    align-items: flex-end;
+  grid-area: header;
+  /*background-color: teal;*/
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
+
 nav {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 auto;
-}
-nav ul{
-    display: flex;
-    align-items: center; /* not working */
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    list-style: none;
-    margin: 0; /* so it would strech the li items nicely*/
-    padding: 0; 
-    width: 100%;
-}
-nav ul li{
-    background-color: aliceblue;
-    flex: 1 1 auto; /* so it would strech the li items nicely*/
-    align-self: center;
-    height: 30px;
-    width: auto;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
 }
 
+nav ul {
+  display: flex;
+  align-items: center; /* not working */
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;  /* so it would strech the li items nicely*/
+  padding: 0;
+  width: 100%;
+  line-height: 50px;
+}
+
+li {
+  background-color: rgba( 50, 50, 230, 0.1);
+  flex: 1 1 auto;  /* so it would strech the li items nicely*/
+  text-align: center;
+  height: 50px;
+  width: auto;
+}
+li:hover {
+  background-color: rgba( 50, 50, 130, 0.7);
+}
+a {
+  text-decoration: none;
+}
+ li a:hover {
+  color: #ddd;
+}
+
+.search {
+  position: absolute;
+  top: 10px;
+  right:5px;
+  margin: 0;
+}
+.search input {
+  border: none;
+  height: 20px;
+}
+.search button {
+  cursor: pointer;
+  border: none;
+  height: 20px;
+}
+.search button:hover {
+  background-color: #333;
+  color: #fff;
+}
 main {
-    grid-area: main;
-    background-color: aquamarine;
-}
-aside {
-    grid-area: aside;
-    background-color: blue
-}
-footer {
-    grid-area: footer;
-    background-color: darkblue;
+  grid-area: main;
+  background-color: aquamarine;
 }
 
+aside {
+  grid-area: aside;
+  background-color: blue
+}
+
+footer {
+  grid-area: footer;
+  background-color: darkblue;
+}
 
 /*******wavy nav bar********/
 
-#item1 {
-    border-top-left-radius: 35em;
+header::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  right: left;
+  bottom: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: green;
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 6
+  0%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: green;
+}
+/* #item1 {
+    border-top-left-radius: 50%;
     border-top-right-radius:  55em;
     border-bottom-right-radius: 2em 5em;
     border-bottom-left-radius: 2em 5em;
     transform: skew(-5deg);
-    transform: skewY(-5deg); 
-    text-align: right;
+    transform: skewY(-5deg);
 }
-#item2 {
+ #item2 {
     transform: skewX(5deg);
-    transform: skewY(5deg); 
+    transform: skewY(5deg);
 }
 #item3 {
     transform: skewX(-10deg);
-    transform: skewY(-5deg); 
+    transform: skewY(-5deg);
 }
 #item4 {
     transform: skewX( 10deg);
-    transform: skewY(5deg); 
+    transform: skewY(5deg);
 }
 #item5 {
     transform: skewX( -15deg);
-    transform: skewY(-5deg); 
+    transform: skewY(-5deg);
 }
 #item6 {
     transform: skewX( 15deg);
-    transform: skewY(5deg); 
-}
-
-
+    transform: skewY(5deg);
+}  */
