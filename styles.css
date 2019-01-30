@@ -7,7 +7,7 @@ html {
 }
 
 .wrapper {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 150px auto 50px;
@@ -32,6 +32,8 @@ nav {
   height: 50px;
   width: 100%;
   margin: 0 auto;
+  padding:10px 0;
+  position:relative;
 }
 
 nav ul {
@@ -99,26 +101,31 @@ footer {
 
 /*******wavy nav bar********/
 
-header::before {
+nav::before {
   content: "";
   position: absolute;
+  z-index: -1;
   width: 50%;
-  right: left;
-  bottom: 100%;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-bottom-color: green;
+  height: 35px;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 100em 10em;
+  border-top-right-radius: 100em 50em;
+  border-top: 15px solid rgba(20,50,100,0.5);
 }
-header::after {
+nav::after {
   content: "";
   position: absolute;
+  z-index: -1;
+  margin:0;
+  padding: 0;
   width: 50%;
+  height: 35px;
   right: 0;
-  top: 6
-  0%;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-bottom-color: green;
+  bottom: 0;
+  border-bottom-left-radius: 100em 70em;
+  border-bottom-right-radius: 100em 10em;
+  border-bottom: 15px solid rgba(20,50,100,0.5);
 }
 /* #item1 {
     border-top-left-radius: 50%;
