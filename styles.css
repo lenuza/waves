@@ -59,6 +59,7 @@ li {
   width: auto;
   border-top: 2px solid rgba(20,50,100,0.5);
   border-bottom: 1px solid rgba(20,50,100,0.5);
+  box-shadow: 5px 0px 10px grey;
 }
 li:hover {
   background-color: rgba( 50, 50, 130, 0.7);
