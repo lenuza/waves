@@ -26,6 +26,7 @@ header {
   display: flex;
   align-items: flex-end;
   position: relative;
+  margin-bottom: 20px;
 }
 
 nav {
@@ -40,25 +41,30 @@ nav ul {
   display: flex;
   align-items: center; /* not working */
   justify-content: space-evenly;
+  flex-wrap: wrap;
   flex-direction: row;
   list-style: none;
   margin: 0;  /* so it would strech the li items nicely*/
   padding: 0;
   width: 100%;
   line-height: 50px;
+  height: 100px;
 }
 
 li {
-  background-color: rgba( 50, 50, 230, 0.1);
+  /* background-color: rgba( 50, 50, 230, 0.1); */
   flex: 1 1 auto;  /* so it would strech the li items nicely*/
   text-align: center;
   height: 50px;
   width: auto;
+  border-top: 2px solid rgba(20,50,100,0.5);
+  border-bottom: 1px solid rgba(20,50,100,0.5);
 }
 li:hover {
   background-color: rgba( 50, 50, 130, 0.7);
 }
 a {
+  display: block; /*Makes the whole li clickable,*/
   text-decoration: none;
 }
  li a:hover {
@@ -99,9 +105,30 @@ footer {
   background-color: darkblue;
 }
 
-/*******wavy nav bar********/
+/*******Wavy Nav Bar********/
+#item1 {
+  transform: rotate(5deg);
+}
+#item2 {
+  transform: rotate(-5deg);
+}
+#item3 {
+  transform: rotate(5deg);
+}
+#item4 {
+  transform: rotate(5deg);
+  align-self: flex-end;
+}
+#item5 {
+  transform: rotate(-5deg);
+  align-self: flex-end;
+}
+#item6 {
+  transform: rotate(5deg);
+  align-self: flex-end;
+}
 
-nav::before {
+/* nav::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -126,7 +153,10 @@ nav::after {
   border-bottom-left-radius: 100em 70em;
   border-bottom-right-radius: 100em 10em;
   border-bottom: 15px solid rgba(20,50,100,0.5);
-}
+} */
+
+
+/**************Another version********************/
 /* #item1 {
     border-top-left-radius: 50%;
     border-top-right-radius:  55em;
