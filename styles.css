@@ -73,19 +73,19 @@ li:hover {
   background-color: rgba( 50, 50, 130, 0.7);
 }
 a {
-  display: block; /*Makes the whole li clickable,*/
+  display: block; /*Makes the whole li clickable*/
   text-decoration: none;
 }
  li a:hover {
   color: #ddd;
 }
 
-.search {
+/* .search {
   position: absolute;
   top: 10px;
   right:5px;
   margin: 0;
-}
+} */
 .search input {
   border: none;
   height: 20px;
@@ -119,6 +119,11 @@ main article h2 {
 aside {
   grid-area: aside;
   background-color: blue
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
 }
 
 footer {
