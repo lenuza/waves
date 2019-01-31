@@ -8,20 +8,6 @@ html {
   background-color: lightblue;
   background-image: linear-gradient(lightblue, darkblue);
 }
-body {
- 
-}
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 150px auto;
-  grid-row-gap: 30px;
-  grid-template-areas:
-    " header header header header header header "
-    " main main main . aside aside";
-  width: auto;
-  height: 95vh;
-}
 
 header {
   grid-area: header;
@@ -38,37 +24,11 @@ h1 {
 }
 
 nav {
-  height: 50px;
-  width: 100%;
-  margin: 0 auto;
-  padding:10px 0;
-  position:relative;
+ visibility: hidden;
+ display: flex;
+ flex-direction: colon;
 }
 
-nav ul {
-  display: flex;
-  align-items: center; /* not working */
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-direction: row;
-  list-style: none;
-  margin: 0;  /* so it would strech the li items nicely*/
-  padding: 0;
-  width: 100%;
-  line-height: 50px;
-  height: 100px;
-}
-
-li {
-  background-color: rgba( 50, 50, 230, 0.1);
-  flex: 1 1 auto;  /* so it would strech the li items nicely*/
-  text-align: center;
-  height: 50px;
-  width: auto;
-  border-top: 2px solid rgba(20,50,100,0.5);
-  border-bottom: 1px solid rgba(20,50,100,0.5);
-  box-shadow: 5px 0px 10px grey;
-}
 li:hover {
   background-color: rgba( 50, 50, 130, 0.7);
 }
@@ -102,6 +62,7 @@ a {
 main {
   grid-area: main;
   background-color: rgba(127, 255, 212,0.3);
+  height: auto;
 }
 article {
   border-top: 2px solid rgba(20,50,100,0.5);
@@ -123,11 +84,12 @@ img {
 
 aside {
   grid-area: aside;
-  background-color: blue
+  /* background-color: blue; */
+  height: auto;
 }
 section {
-  margin-top: 20px;
-  height: 100vh;
+  margin-top: 30px;
+  height: auto;
   width: 100%;
 }
 
@@ -135,6 +97,55 @@ footer {
   grid-area: footer;
   background-color: darkblue;
 }
+
+/*******Grid and Media queries*************/
+
+
+@media screen and (min-width:1000px) {
+
+  nav {
+    visibility: visible;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+  }
+  nav ul {
+    display: flex;
+    align-items: center; /* not working */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;  /* so it would strech the li items nicely*/
+    padding: 0;
+    width: 100%;
+    line-height: 50px;
+    height: 100px;
+  }
+  li {
+    background-color: rgba( 50, 50, 230, 0.1);
+    flex: 1 1 auto;  /* so it would strech the li items nicely*/
+    text-align: center;
+    height: 50px;
+    width: auto;
+    border-top: 2px solid rgba(20,50,100,0.5);
+    border-bottom: 1px solid rgba(20,50,100,0.5);
+    box-shadow: 5px 0px 10px grey;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 150px auto;
+    grid-row-gap: 30px;
+    grid-template-areas:
+      " header header header header header header "
+      " main main main . aside aside";
+    width: auto;
+    height: 95vh;
+  }
+} 
 
 /*******Wavy Nav Bar********/
 #item1 {
@@ -158,6 +169,35 @@ footer {
   transform: rotate(5deg);
   align-self: flex-end;
 }
+
+/*Header wave animation**********/
+/* .wave1 {
+  animation-name: wave1;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: rgba(20,50,100,0.5);
+  border: 1px solid transparent;
+  border-top-color: turquoise;
+}
+
+
+@keyframes wave1 {
+  0%   {
+    border-radius: 50%;
+
+  }
+  25%  {
+    border-radius: 20%;
+  }
+  50%  {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 20%;
+
+  }
+} */
 
 /* nav::before {
   content: "";
