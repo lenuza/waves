@@ -98,6 +98,15 @@ footer {
   background-color: darkblue;
 }
 
+/*****menu button*********/
+#menu {
+  display: none;
+}
+.menu span {
+  display:block;
+  background-color: #333;
+}
+
 /*******Grid and Media queries*************/
 
 
@@ -144,6 +153,9 @@ footer {
       " main main main . aside aside";
     width: auto;
     height: 95vh;
+  }
+  .menu {
+    display: none;
   }
 } 
 
