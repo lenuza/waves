@@ -5,20 +5,20 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Helvetica", sans-serif;
+  background-color: lightblue;
+  background-image: linear-gradient(lightblue, darkblue);
 }
 body {
-  background-color: lightblue;
+ 
 }
 .wrapper {
-  /* background-color: lightblue; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 150px auto 50px;
+  grid-template-rows: 150px auto;
   grid-row-gap: 30px;
   grid-template-areas:
     " header header header header header header "
-    " main main main . aside aside"
-    " footer footer footer footer footer footer";
+    " main main main . aside aside";
   width: auto;
   height: 95vh;
 }
@@ -60,7 +60,7 @@ nav ul {
 }
 
 li {
-   background-color: rgba( 50, 50, 230, 0.1);
+  background-color: rgba( 50, 50, 230, 0.1);
   flex: 1 1 auto;  /* so it would strech the li items nicely*/
   text-align: center;
   height: 50px;
@@ -115,15 +115,20 @@ main article h2 {
   text-decoration: underline;
   color: #333;
 }
+img {
+  width: 100px;
+  float:left;
+  margin:5px;
+}
 
 aside {
   grid-area: aside;
   background-color: blue
 }
 section {
-  width: 100%;
+  margin-top: 20px;
   height: 100vh;
-  background-color: aqua;
+  width: 100%;
 }
 
 footer {
