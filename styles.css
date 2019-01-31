@@ -6,7 +6,9 @@ html {
   box-sizing: border-box;
   font-family: "Helvetica", sans-serif;
   background-color: lightblue;
-  background-image: linear-gradient(lightblue, darkblue);
+  background-image: linear-gradient(lightblue 50%, darkblue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
@@ -89,7 +91,7 @@ aside {
 }
 section {
   margin-top: 30px;
-  height: auto;
+  height: 800px;
   width: 100%;
 }
 
