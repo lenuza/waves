@@ -4,8 +4,11 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
 }
-
+body {
+  background-color: lightblue;
+}
 .wrapper {
   /* background-color: lightblue; */
   display: grid;
@@ -27,6 +30,11 @@ header {
   align-items: flex-end;
   position: relative;
   margin-bottom: 20px;
+}
+h1 {
+  font-weight: lighter;
+  color: #333;
+  text-transform: capitalize;
 }
 
 nav {
@@ -52,7 +60,7 @@ nav ul {
 }
 
 li {
-  /* background-color: rgba( 50, 50, 230, 0.1); */
+   background-color: rgba( 50, 50, 230, 0.1);
   flex: 1 1 auto;  /* so it would strech the li items nicely*/
   text-align: center;
   height: 50px;
@@ -89,11 +97,23 @@ a {
 }
 .search button:hover {
   background-color: #333;
-  color: #fff;
+  color: #ddd;
 }
 main {
   grid-area: main;
-  background-color: aquamarine;
+  background-color: rgba(127, 255, 212,0.3);
+}
+article {
+  border-top: 2px solid rgba(20,50,100,0.5);
+  border-bottom: 1px solid rgba(20,50,100,0.5);
+  box-shadow: 5px 0px 10px grey;
+}
+main article {
+  height: 50%;
+}
+main article h2 {
+  text-decoration: underline;
+  color: #333;
 }
 
 aside {
