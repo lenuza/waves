@@ -9,7 +9,7 @@ html {
 }
 
 .outer-wrapper {
-  background-image: linear-gradient(lightblue 50%, darkblue);
+  background-image: linear-gradient(lightblue, darkblue);
   background-repeat: no-repeat;
 }
 
@@ -68,14 +68,16 @@ main {
   background-color: rgba(127, 255, 212,0.3);
   height: auto;
 }
-article {
+/*****news section on main page******/
+.border-styling {
   border-top: 2px solid rgba(20,50,100,0.5);
-  border-bottom: 1px solid rgba(20,50,100,0.5);
+  /* border-bottom: 1px solid rgba(20,50,100,0.5); */
   box-shadow: 5px 0px 10px grey;
 }
 main article {
   height: 50%;
 }
+
 main article h2 {
   text-decoration: underline;
   color: #333;
@@ -85,18 +87,55 @@ img {
   float:left;
   margin:5px;
 }
-
+/******styling the aside details***/
 aside {
   grid-area: aside;
   /* background-color: blue; */
   height: auto;
 }
+details {
+  margin-top: 30px;
+  height: 50px;
+  width: 100%;
+}
+summary, a {
+    outline: 0;
+
+}
+/* summary:focus interesting-facts-details  {
+  background-color: blue;
+  z-index: 1;
+} */
+details > p {
+  background-color: rgba(0, 0, 0, 1.0);;
+  color: #ddd;
+}
+details:nth-child(1) > p {
+  position: relative;
+  z-index: 6;
+}
+details:nth-child(2) > p {
+  position: relative;
+  z-index: 5;
+}
+details:nth-child(3) > p {
+  position: relative;
+  z-index: 4;
+}
+details:nth-child(4) > p {
+  position: relative;
+  z-index: 3;
+}
+details:nth-child(5) > p {
+  position: relative;
+  z-index: 2;
+}
+/*********************************************/
 section {
   margin-top: 30px;
   height: 800px;
   width: 100%;
 }
-
 footer {
   grid-area: footer;
   background-color: darkblue;
