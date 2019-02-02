@@ -109,6 +109,7 @@ summary, a {
 details > p {
   background-color: rgba(0, 0, 0, 1.0);;
   color: #ddd;
+  padding: 5px;
 }
 details:nth-child(1) > p {
   position: relative;
