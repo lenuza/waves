@@ -6,9 +6,11 @@ html {
   box-sizing: border-box;
   font-family: "Helvetica", sans-serif;
   background-color: lightblue;
+}
+
+.outer-wrapper {
   background-image: linear-gradient(lightblue 50%, darkblue);
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 header {
@@ -145,7 +147,7 @@ footer {
     border-bottom: 1px solid rgba(20,50,100,0.5);
     box-shadow: 5px 0px 10px grey;
   }
-  .wrapper {
+  .main_page_wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 150px auto;
@@ -159,7 +161,7 @@ footer {
   .menu {
     display: none;
   }
-} 
+}
 
 /*******Wavy Nav Bar********/
 #item1 {
