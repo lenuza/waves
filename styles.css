@@ -226,6 +226,22 @@ footer {
   align-self: flex-end;
 }
 
+
+
+/*********sub navs****/
+ .dropdown-content {
+  display: none;
+  position: relative;
+  width:100%;
+  z-index: 1;
+  background-color: rgba( 50, 50, 230, 1.0);
+}
+.dropdown:hover .dropdown-content {
+ display: block;
+
+}
+
+
 /*Header wave animation**********/
 /* .wave1 {
   animation-name: wave1;
