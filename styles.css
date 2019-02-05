@@ -80,32 +80,43 @@ a {
   right:5px;
   margin: 0;
 } */
-
+.search {
+  display: flex;
+  height: 30px;
+}
 .search input {
-  border: none;
-  height: 25px;
+  border: 2px solid rgba( 50, 100, 130, 0.7);;
+  line-height: 30px;
   width: 75%;
-  display: inline-block;
 }
 .search button {
-  cursor: pointer;
+  background-color: rgba( 50, 100, 130, 0.7);
   border: none;
-  height: 25px;
+  cursor: pointer;
+  font-size: 1.5em;
+  height: 30px;
+  line-height: 30px;
   width: 15%;
   outline-style: none;
-  padding: 0;
-  display: inline-block;
 }
 .search button:hover {
   background-color: #333;
   color: #ddd;
+}
+#item6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main {
   grid-area: main;
   background-color: rgba(127, 255, 212,0.3);
   height: auto;
 }
-
+.main-news-abstract {
+  padding: 5px 10px;
+  text-align: justify;
+}
 
 .main-news:first-of-type  {
   position: relative; /*hoping it will push element behind the last detail element but not*/
@@ -141,7 +152,9 @@ main {
 .main-news a {
   font-size: 2em;
 }
-
+.main-news i {
+  color: #000;
+}
 /*****news section on main page******/
 .border-styling {
   border-top: 2px solid rgba(20,50,100,0.5);
@@ -163,8 +176,11 @@ img {
 }
 /******styling the aside details***/
 aside {
+  color: #333;
   grid-area: aside;
   height: auto;
+  margin-bottom: 20px;
+  min-width: 400px;
 }
 summary, a {
     outline: 0;
@@ -176,10 +192,12 @@ details {
 }
 details summary {
   cursor: pointer;
+  font-weight: bold;
   height: 50px;
 }
 details > p {
   background-color: #446baa;
+  border: 2px solid rgba( 50, 100, 130, 1.0);
   color: #eee;
   padding: 10px;
   text-align: justify;
@@ -225,11 +243,14 @@ section {
   font-weight: bold;
   margin: 30px 10px;
 }
+#about-us i {
+  color: #000;
+}
 
-#wildlife, #news {
+#wildlife, #wildlife i, #news, #news i {
   color: #ccc;
 }
-#how-to-help, #contacts {
+#how-to-help,#how-to-help i, #contacts, #contacts i {
   color: #ddd;
 }
 /****************************************/
@@ -296,17 +317,11 @@ footer {
       " main main main main main main"
       "aside aside aside aside aside aside";
     width: auto;
-    height: 90vh;
-  }
-  aside {
-    width: 100%;
-  }
-  details {
-    display: block;
-    width: 100%;
+    height: auto;
   }
 
-  .main-news {
+
+  article.main-news {
     display: grid;
     grid-template-columns: repeat( 3, 1fr);
     grid-template-rows: 300px auto;
@@ -314,9 +329,9 @@ footer {
       "title figure figure"
       "article article article";
     width: auto;
-    height: auto;
     margin: 10px auto;
-    padding: 100px 10px;
+    padding: 20px 10px;
+
     }
   .main-news:first-of-type {
     margin: 40px auto;
@@ -329,9 +344,7 @@ footer {
   #menu, .menu {
     display: none;
   }
-  details {
-    max-width: 450px;
-  }
+
 
   /*******Wavy Nav Bar********/
   #item1 {
