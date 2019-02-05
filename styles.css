@@ -17,25 +17,51 @@ html {
 .main_page_wrapper {
   padding: 5px;
 }
-header {
-  grid-area: header;
-  /*background-color: teal;*/
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  margin-bottom: 20px;
-}
+
 h1 {
-  font-weight: lighter;
   color: #333;
+  font-size: 3.5em;
+  font-weight: lighter;
   text-transform: capitalize;
 }
 
-nav {
- visibility: hidden;
- display: flex;
- flex-direction: colon;
+/***** hamburger menu button*********/
+#menu {
+  opacity: 0;/* so default checkbox is not visible*/
 }
+ label {
+   font-size: 2em;
+ }
+nav {
+  display: none;
+  background-color: #37a;
+  height: 30vh;
+  width: 100%;
+  margin: 10px auto;
+}
+input[type=checkbox]:checked ~ nav {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;  /* so it would strech the li items nicely*/
+  padding: 0;
+  width: 100%;
+  line-height: 50px;
+  height: 100px;
+}
+li {
+  background-color: rgba( 50, 50, 230, 0.1);
+  flex: 1 1 auto;  /* so it would strech the li items nicely*/
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  border-top: 2px solid rgba(20,50,100,0.5);
+  border-bottom: 1px solid rgba(20,50,100,0.5);
+  box-shadow: 5px 0px 10px grey;
+}
+
 
 li:hover {
   background-color: rgba( 50, 50, 130, 0.7);
@@ -205,27 +231,32 @@ footer {
   line-height: 150px;
 }
 
-/***** hamburger menu button*********/
-#menu {
-  display: none;
-}
-.menu span {
-  display:block;
-  background-color: #333;
-}
 
 /*******Grid and Media queries*************/
 
 
 @media screen and (min-width:1220px) {
 
+  header {
+    grid-area: header;
+    /*background-color: teal;*/
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
   nav {
-    visibility: visible;
     height: 50px;
     width: 100%;
     margin: 0 auto;
     padding: 10px 0;
     position: relative;
+    background-color: transparent;
   }
   nav ul {
     display: flex;
@@ -239,16 +270,6 @@ footer {
     width: 100%;
     line-height: 50px;
     height: 100px;
-  }
-  li {
-    background-color: rgba( 50, 50, 230, 0.1);
-    flex: 1 1 auto;  /* so it would strech the li items nicely*/
-    text-align: center;
-    height: 50px;
-    width: auto;
-    border-top: 2px solid rgba(20,50,100,0.5);
-    border-bottom: 1px solid rgba(20,50,100,0.5);
-    box-shadow: 5px 0px 10px grey;
   }
   .main_page_wrapper {
     display: grid;
@@ -286,47 +307,43 @@ footer {
     display: none;
   }
 
+  /*******Wavy Nav Bar********/
+  #item1 {
+    transform: rotate(5deg);
+  }
+  #item2 {
+    transform: rotate(-5deg);
+  }
+  #item3 {
+    transform: rotate(5deg);
+  }
+  #item4 {
+    transform: rotate(5deg);
+    align-self: flex-end;
+  }
+  #item5 {
+    transform: rotate(-5deg);
+    align-self: flex-end;
+  }
+  #item6 {
+    transform: rotate(5deg);
+    align-self: flex-end;
+  }
+
+  /*********sub navs****/
+   .dropdown-content {
+    display: none;
+    position: relative;
+    width:100%;
+    z-index: 1;
+    background-color: rgba( 50, 50, 230, 1.0);
+  }
+  .dropdown:hover .dropdown-content {
+   display: block;
+
+  }
 
 }
-
-/*******Wavy Nav Bar********/
-#item1 {
-  transform: rotate(5deg);
-}
-#item2 {
-  transform: rotate(-5deg);
-}
-#item3 {
-  transform: rotate(5deg);
-}
-#item4 {
-  transform: rotate(5deg);
-  align-self: flex-end;
-}
-#item5 {
-  transform: rotate(-5deg);
-  align-self: flex-end;
-}
-#item6 {
-  transform: rotate(5deg);
-  align-self: flex-end;
-}
-
-
-
-/*********sub navs****/
- .dropdown-content {
-  display: none;
-  position: relative;
-  width:100%;
-  z-index: 1;
-  background-color: rgba( 50, 50, 230, 1.0);
-}
-.dropdown:hover .dropdown-content {
- display: block;
-
-}
-
 
 /*Header wave animation**********/
 /* .wave1 {
