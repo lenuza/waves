@@ -231,14 +231,14 @@ details:nth-child(5) > p {
 }
 #wallpaper_top {
 
-  background-image: url(images/wallpaper/tim-marshall-82948-unsplash_banner.jpg);
+  background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
 }
 
 #wallpaper_middle {
-  background-image: url(images/wallpaper/vladimir-proskurovskiy-565471-unsplash_banner.jpg);
+  background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/tim-marshall-82948-unsplash_banner.jpg);
 }
 #wallpaper_bottom {
-  background-image: url(images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
+  background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
 }
 /*******Sections*****************************/
 
