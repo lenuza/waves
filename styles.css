@@ -27,7 +27,7 @@ h1 {
 
 /***** hamburger menu button*********/
 #menu {
-  opacity: 0;/* so default checkbox is not visible*/
+  opacity: 0;/* so the default checkbox is not visible*/
 }
  label {
    font-size: 2em;
@@ -117,18 +117,11 @@ main {
   padding: 5px 10px;
   text-align: justify;
 }
-
-.main-news:first-of-type  {
-  position: relative; /*hoping it will push element behind the last detail element but not*/
-  z-index: 0;
-}
-
-
-
 .main-news h2 {
   grid-area: title;
   text-transform: uppercase;
   font-size: 2.5em;
+  padding-top: 100px;
 }
 .main-news figure {
   display: block;
@@ -220,9 +213,33 @@ details:nth-child(4) > p {
 }
 details:nth-child(5) > p {
   position: relative;
+  z-index: 4;
+}
+
+
+/********Wallpaper styles*******/
+.wallpaper  {
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  margin-top: 70px;
+  background-size: cover;
+}
+.wallpaper:first-of-type {
+  position: absolute;
   z-index: 2;
 }
-/*********************************************/
+#wallpaper_top {
+
+  background-image: url(images/wallpaper/tim-marshall-82948-unsplash_banner.jpg);
+}
+
+#wallpaper_middle {
+  background-image: url(images/wallpaper/vladimir-proskurovskiy-565471-unsplash_banner.jpg);
+}
+#wallpaper_bottom {
+  background-image: url(images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
+}
 /*******Sections*****************************/
 
 section {
@@ -231,7 +248,7 @@ section {
   margin-top: 30px;
   padding: 20px;
   text-align: justify;
-  width: 95%;
+  width: 90%;
 }
 .section-header {
   display: flex;
@@ -239,7 +256,7 @@ section {
   font-size: 1.5em;
 }
 .section-header a {
-  display: block; /*maybe bot needed*/
+  display: block; /*maybe not needed*/
   font-weight: bold;
   margin: 30px 10px;
 }
@@ -252,6 +269,18 @@ section {
 }
 #how-to-help,#how-to-help i, #contacts, #contacts i {
   color: #ddd;
+}
+
+#how-to-help>div {
+  column-count: 1;
+}
+#how-to-help>div>p {
+  text-indent: 1em;
+}
+#how-to-help>div>p::first-line {
+  text-indent: 10em;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 /****************************************/
 
@@ -320,6 +349,9 @@ footer {
     height: auto;
   }
 
+  #wallpaper_top {
+    display: block;
+  }
 
   article.main-news {
     display: grid;
@@ -381,11 +413,15 @@ footer {
    display: block;
 
   }
+
+  #how-to-help>div {
+    column-count: 2;
+  }
+
 }
 
 
 @media screen and (min-width:1040px) {
-
 
   .main_page_wrapper {
     display: grid;
@@ -396,7 +432,15 @@ footer {
       " header header header header header header "
       " main main main . aside aside";
     width: auto;
-    height: 90vh;
+    height: auto;
+  }
+  #how-to-help>div {
+    column-count: 4;
+    column-rule-style: ridge;
+    column-rule-width: 1px;
+  }
+  #how-to-help>div>p::first-line {
+
   }
 
 }
