@@ -24,7 +24,6 @@ h1 {
   font-weight: lighter;
   text-transform: capitalize;
 }
-
 /***** hamburger menu button*********/
 #menu {
   opacity: 0;/* so the default checkbox is not visible*/
@@ -162,7 +161,7 @@ main article h2 {
   text-decoration: underline;
   color: #333;
 }
-img {
+img.main-news-abstract {
   width: 100px;
   float:left;
   margin:5px;
@@ -230,12 +229,10 @@ details:nth-child(5) > p {
   z-index: 2;
 }
 #wallpaper_top {
-
-  background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
-}
-
-#wallpaper_middle {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/tim-marshall-82948-unsplash_banner.jpg);
+}
+#wallpaper_middle {
+  background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/vladimir-proskurovskiy-565471-unsplash_banner.jpg);
 }
 #wallpaper_bottom {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
@@ -260,6 +257,21 @@ section {
   font-weight: bold;
   margin: 30px 10px;
 }
+.img-float-right {
+  float: right;
+  width: 100px;
+  margin:5px;
+}
+.img-float-left  {
+  float: left;
+  width: 100px;
+  margin:5px;
+}
+
+.wildlife-img {
+  display: none;
+}
+
 #about-us i {
   color: #000;
 }
@@ -286,12 +298,19 @@ section {
 
 footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   background-color: rgb(6, 11, 50);
   color: #ddd;
   height: 150px;
   line-height: 150px;
 }
-
+footer a {
+ color: #ddd;
+ font-size: 2em;
+ margin-left: 50px;
+}
 
 /*******Grid and Media queries*************/
 
@@ -347,10 +366,6 @@ footer {
       "aside aside aside aside aside aside";
     width: auto;
     height: auto;
-  }
-
-  #wallpaper_top {
-    display: block;
   }
 
   article.main-news {
@@ -413,7 +428,9 @@ footer {
    display: block;
 
   }
-
+  .wildlife-img {
+    display: flex;
+  }
   #how-to-help>div {
     column-count: 2;
   }
