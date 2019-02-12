@@ -364,7 +364,7 @@ section {
   text-indent: 1em;
 }
 
-#how-to-help>div>p::first-line {
+#how-to-help>div>p::first-letter {
   font-weight: bolder;
   text-transform: uppercase;
 }
@@ -548,7 +548,7 @@ footer a:hover {
     width: 60%;
     height: 55px;
     overflow: hidden;
-    background-color: rgba(50, 150, 200, 1.0);
+    background-color: rgba(50, 150, 200, 0.5);
   }
 
   .wave {
