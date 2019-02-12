@@ -18,7 +18,7 @@ html {
 .main_page_wrapper {
   padding: 5px;
 }
-header {
+.main_page_wrapper header {
   background-color: #ccf2ff;
 }
 h1 {
