@@ -15,43 +15,53 @@ html {
   background-image: linear-gradient(#ccf2ff, #000);
   background-repeat: no-repeat;
 }
+
 .main_page_wrapper {
   padding: 5px;
 }
+
 .main_page_wrapper header {
   background-color: #ccf2ff;
 }
+
 h1 {
   color: #333;
   font-size: 3.5em;
   font-weight: lighter;
   text-transform: capitalize;
 }
+
 /****Wave container invisible on smaller screens****/
 #wave-container {
   display: none;
 }
+
 /***** Hamburger menu button*********/
 #menu {
-  opacity: 0;/* so the default checkbox is not visible*/
+  opacity: 0;
+  /* so the default checkbox is not visible*/
 }
- label {
-   font-size: 2em;
- }
- label.menu::before {
-    content: "\f150";
-    font-family: "Font Awesome 5 Free";
- }
 
- /***Nav hidden on small screen********/
- input[type=checkbox]:checked ~ nav {
-   display: block;
- }
-input[type=checkbox]:checked ~ label.menu::before {
+label {
+  font-size: 2em;
+}
+
+label.menu::before {
+  content: "\f150";
+  font-family: "Font Awesome 5 Free";
+}
+
+/***Nav hidden on small screen********/
+input[type=checkbox]:checked~nav {
+  display: block;
+}
+
+input[type=checkbox]:checked~label.menu::before {
   content: "\f410";
   font-family: "Font Awesome 5 Free";
   transition: content 2s;
 }
+
 nav {
   display: none;
   background-color: #37a;
@@ -59,17 +69,21 @@ nav {
   margin: 10px auto;
   width: 100%;
 }
+
 nav ul {
   list-style: none;
-  margin: 0;  /* so it would strech the li items nicely*/
+  margin: 0;
+  /* so it would strech the li items nicely*/
   padding: 0;
   height: auto;
   line-height: 50px;
   width: 100%;
 }
+
 li {
   background-color: #001a33;
-  flex: 1 1 auto;  /* so it would strech the li items nicely*/
+  flex: 1 1 auto;
+  /* so it would strech the li items nicely*/
   text-align: center;
   font-size: 1.5em;
   height: 50px;
@@ -79,14 +93,18 @@ li {
 li:hover {
   background-color: #cce6ff;
 }
+
 a {
   color: #ddd;
-  display: block; /*Makes the whole li clickable*/
+  display: block;
+  /*Makes the whole li clickable*/
   text-decoration: none;
 }
- li a:hover {
+
+li a:hover {
   color: #333;
 }
+
 /******Search field*************/
 /* .search {
   position: absolute;
@@ -99,17 +117,21 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .search {
   display: flex;
   height: 30px;
 }
+
 .search input {
-  border: 2px solid rgba( 50, 100, 130, 0.7);;
+  border: 2px solid rgba(50, 100, 130, 0.7);
+  ;
   line-height: 30px;
   width: 75%;
 }
+
 .search button {
-  background-color: rgba( 50, 100, 130, 0.7);
+  background-color: rgba(50, 100, 130, 0.7);
   border: none;
   cursor: pointer;
   font-size: 1.5em;
@@ -118,6 +140,7 @@ a {
   width: 15%;
   outline-style: none;
 }
+
 .search button:hover {
   background-color: #333;
   color: #ddd;
@@ -129,12 +152,14 @@ a {
   border-bottom: 1px solid #333;
   box-shadow: 5px 0px 10px grey;
 }
+
 /************Main****************/
 main {
   grid-area: main;
   height: auto;
   margin-top: 30px;
 }
+
 main article {
   height: 50%;
 }
@@ -143,17 +168,20 @@ main article h2 {
   text-decoration: underline;
   color: #333;
 }
+
 img.main-news-abstract {
   width: 100px;
-  float:left;
-  margin:5px;
+  float: left;
+  margin: 5px;
 }
+
 .main-news-abstract {
   color: #000;
   padding: 5px 10px;
   text-align: justify;
   font-size: 1em;
 }
+
 .main-news h2 {
   grid-area: title;
   text-transform: uppercase;
@@ -167,22 +195,28 @@ img.main-news-abstract {
   width: 95%;
   margin: 0 auto;
 }
+
 .main-news div {
   grid-area: article;
 }
+
 .main-news p {
   padding: 5px 20px;
   text-align: justify;
 }
+
 .main-news p:first-child::first-letter {
   font-size: 250%;
 }
+
 .main-news figure img {
-   width: 100%;
+  width: 100%;
 }
+
 .main-news a {
   font-size: 2em;
 }
+
 .main-news i {
   color: #000;
 }
@@ -191,74 +225,87 @@ img.main-news-abstract {
 aside {
   color: #333;
   grid-area: aside;
-  height: auto;
-  margin-top: 30px;
-  min-width: 400px;
-}
-summary, a {
-    outline: 0;
-}
-details {
   margin-top: 30px;
   height: auto;
   width: 100%;
 }
+
+summary, a {
+  outline: 0;
+}
+
+details {
+  margin-top: 30px;
+  height: auto;
+  width: auto;
+}
+
 details summary {
   cursor: pointer;
   font-weight: bold;
   height: 50px;
 }
-details > p {
+
+details>p {
   background-color: #001a33;
-  border: 2px solid rgba( 50, 100, 130, 1.0);
+  border: 2px solid rgba(50, 100, 130, 1.0);
   color: #eee;
   padding: 10px;
   text-align: justify;
 }
-details:nth-child(1) > p {
+
+details:nth-child(1)>p {
   position: relative;
   z-index: 6;
 }
-details:nth-child(2) > p {
+
+details:nth-child(2)>p {
   position: relative;
   z-index: 5;
 }
-details:nth-child(3) > p {
+
+details:nth-child(3)>p {
   position: relative;
   z-index: 4;
 }
-details:nth-child(4) > p {
+
+details:nth-child(4)>p {
   position: relative;
   z-index: 3;
 }
-details:nth-child(5) > p {
+
+details:nth-child(5)>p {
   position: relative;
   z-index: 4;
 }
 
 /********Wallpaper styles*******/
-.wallpaper  {
+.wallpaper {
   width: 100%;
   height: 70px;
   margin: auto;
   margin-top: 70px;
   background-size: cover;
 }
+
 .wallpaper:first-of-type {
   position: absolute;
   z-index: 2;
 }
+
 #wallpaper_top {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/tim-marshall-82948-unsplash_banner.jpg);
 }
+
 #wallpaper_middle {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/vladimir-proskurovskiy-565471-unsplash_banner.jpg);
 }
+
 #wallpaper_bottom {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
 }
-/*******Sections*****************************/
 
+/*******Sections*****************************/
 section {
   height: auto;
   margin: auto;
@@ -267,25 +314,30 @@ section {
   text-align: justify;
   width: 90%;
 }
+
 .section-header {
   display: flex;
   flex-direction: row;
   font-size: 1.5em;
 }
+
 .section-header a {
-  display: block; /*maybe not needed*/
+  display: block;
+  /*maybe not needed*/
   font-weight: bold;
   margin: 30px 10px;
 }
+
 .img-float-right {
   float: right;
   width: 100px;
-  margin:5px;
+  margin: 5px;
 }
-.img-float-left  {
+
+.img-float-left {
   float: left;
   width: 100px;
-  margin:5px;
+  margin: 5px;
 }
 
 .wildlife-img {
@@ -299,23 +351,26 @@ section {
 #wildlife, #wildlife i, #news, #news i {
   color: #ccc;
 }
-#how-to-help,#how-to-help i, #contacts, #contacts i {
+
+#how-to-help, #how-to-help i, #contacts, #contacts i {
   color: #ddd;
 }
 
 #how-to-help>div {
   column-count: 1;
 }
+
 #how-to-help>div>p {
   text-indent: 1em;
 }
+
 #how-to-help>div>p::first-line {
   text-indent: 10em;
   font-weight: bolder;
   text-transform: uppercase;
 }
-/****************************************/
 
+/****************************************/
 footer {
   grid-area: footer;
   display: flex;
@@ -326,18 +381,18 @@ footer {
   height: 150px;
   line-height: 150px;
 }
+
 footer a {
- color: #ddd;
- font-size: 2em;
- margin-left: 50px;
+  color: #ddd;
+  font-size: 2em;
+  margin-left: 50px;
 }
+
 footer a:hover {
   color: #4da9ff;
 }
 
 /*******Grid and Media queries*************/
-
-
 @media screen and (min-width: 800px) {
   header {
     grid-area: header;
@@ -346,9 +401,13 @@ footer a:hover {
     position: relative;
     margin-bottom: 20px;
   }
+
   h1 {
     font-size: 2.5em;
+    height: 50%;
+    line-height: 50px;
   }
+
   nav {
     display: block;
     height: 50px;
@@ -358,6 +417,7 @@ footer a:hover {
     position: relative;
     background-color: transparent;
   }
+
   nav ul {
     display: flex;
     align-items: center;
@@ -365,12 +425,14 @@ footer a:hover {
     flex-wrap: wrap;
     flex-direction: row;
     list-style: none;
-    margin: 0;  /* so it would strech the li items nicely*/
+    margin: 0;
+    /* so it would strech the li items nicely*/
     padding: 0;
     width: 100%;
     line-height: 50px;
     height: 100px;
   }
+
   li {
     width: auto;
   }
@@ -390,7 +452,7 @@ footer a:hover {
 
   article.main-news {
     display: grid;
-    grid-template-columns: repeat( 3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 300px auto;
     grid-template-areas:
       "title figure figure"
@@ -398,8 +460,8 @@ footer a:hover {
     width: auto;
     margin: 10px auto;
     padding: 20px 10px;
+  }
 
-    }
   .main-news:first-of-type {
     margin: 40px auto;
   }
@@ -414,38 +476,42 @@ footer a:hover {
 
   /*******Wavy Nav Bar********/
   #item1 {
-
     transform: rotate(5deg);
   }
+
   #item2 {
     transform: rotate(-5deg);
   }
+
   #item3 {
     transform: rotate(5deg);
   }
+
   #item4 {
     transform: rotate(5deg);
     align-self: flex-end;
   }
+
   #item5 {
     transform: rotate(-5deg);
     align-self: flex-end;
   }
+
   #item6 {
     margin-top: 10px;
     align-self: flex-end;
   }
+
   .wildlife-img {
     display: flex;
   }
+
   #how-to-help>div {
     column-count: 2;
   }
-
 }
 
 @media screen and (min-width:1040px) {
-
   .main_page_wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -457,14 +523,17 @@ footer a:hover {
     width: auto;
     height: auto;
   }
+
   #how-to-help>div {
     column-count: 4;
     column-rule-style: ridge;
     column-rule-width: 1px;
   }
+
   details {
     height: 50px;
   }
+
   /*Header wave animation**********/
   #wave-container {
     position: absolute;
@@ -477,11 +546,12 @@ footer a:hover {
     align-items: flex-end;
     justify-content: stretch;
     margin: auto;
-    width: 870px;
+    width: 60%;
     height: 55px;
     overflow: hidden;
     background-color: rgba(50, 150, 200, 1.0);
   }
+
   .wave {
     box-sizing: border-box;
     width: 100px;
@@ -491,71 +561,90 @@ footer a:hover {
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
   }
+
   #wave-1 {
     animation: wave1 3s infinite;
   }
+
   #wave-2 {
     animation: wave1 3s infinite;
   }
+
   #wave-3 {
     animation: wave2 3s infinite;
   }
+
   #wave-4 {
     animation: wave2 3s infinite;
   }
+
   #wave-5 {
     animation: wave3 3s infinite;
   }
+
   #wave-6 {
     animation: wave3 3s infinite;
   }
+
   #wave-7 {
     animation: wave3 3s infinite;
   }
+
   #wave-8 {
     animation: wave2 3s infinite;
   }
+
   #wave-9 {
     animation: wave2 3s infinite;
   }
+
   #wave-10 {
     animation: wave1 3s infinite;
   }
+
   #wave-11 {
     animation: wave1 3s infinite;
   }
+
   @keyframes wave1 {
     0% {
-     border-radius: 0 0 40% 60%;
+      border-radius: 0 0 40% 60%;
     }
+
     50% {
-     border-radius: 0 0 60% 40%;
+      border-radius: 0 0 60% 40%;
     }
+
     100% {
-     border-radius: 0 0 40% 60%;
-    }
-  }
-  @keyframes wave2 {
-    0% {
-     border-radius: 0 0 50% 70%;
-    }
-    50% {
-     border-radius: 0 0 70% 50%;
-    }
-    100% {
-     border-radius: 0 0 50% 70%;
-    }
-  }
-   @keyframes wave3 {
-    0% {
-     border-radius: 0 0 50% 70%;
-    }
-    50% {
-     border-radius: 0 0 70% 50%;
-    }
-    100% {
-     border-radius: 0 0 50% 70%;
+      border-radius: 0 0 40% 60%;
     }
   }
 
+  @keyframes wave2 {
+    0% {
+      border-radius: 0 0 50% 70%;
+    }
+
+    50% {
+      border-radius: 0 0 70% 50%;
+    }
+
+    100% {
+      border-radius: 0 0 50% 70%;
+    }
+  }
+
+  @keyframes wave3 {
+    0% {
+      border-radius: 0 0 50% 70%;
+    }
+
+    50% {
+      border-radius: 0 0 70% 50%;
+    }
+
+    100% {
+      border-radius: 0 0 50% 70%;
+    }
+  }
 }
