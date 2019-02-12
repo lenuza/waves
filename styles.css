@@ -365,7 +365,6 @@ section {
 }
 
 #how-to-help>div>p::first-line {
-  text-indent: 10em;
   font-weight: bolder;
   text-transform: uppercase;
 }
