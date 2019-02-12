@@ -360,9 +360,7 @@ section {
   column-count: 1;
 }
 
-#how-to-help>div>p {
-  text-indent: 1em;
-}
+
 
 #how-to-help>div>p::first-line {
   font-weight: bolder;
