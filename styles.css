@@ -149,7 +149,9 @@ li a:hover {
 /*****Border style on main page******/
 .border-styling {
   border-top: 2px solid #333;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #333;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
   box-shadow: 5px 0px 10px grey;
 }
 
@@ -313,10 +315,11 @@ section {
   margin: auto;
   margin-top: 30px;
   padding: 20px;
-  text-align: justify;
   width: 90%;
 }
-
+section p {
+  text-align: justify;
+}
 .section-header {
   display: flex;
   flex-direction: row;
@@ -504,12 +507,15 @@ footer a:hover {
   }
 
   .wildlife-img {
+    align-items: flex-start;/*fixes chrome flexbox img ratio problem*/
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-  }
 
+  }
+  .wildlife-img img {
+    width: 20%; /*fixes chrome flexbox img ratio problem*/
+  }
   #how-to-help>div {
     column-count: 2;
   }
