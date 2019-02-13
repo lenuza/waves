@@ -91,7 +91,7 @@ li {
 }
 
 li:hover {
-  background-color: #cce6ff;
+  background-color: #6d9cad;
 }
 
 a {
@@ -241,6 +241,8 @@ details {
 }
 
 details summary {
+  background-color: rgba(50, 150, 200, 1.0);
+  padding: 5px;
   cursor: pointer;
   font-weight: bold;
   height: 50px;
@@ -388,7 +390,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #4da9ff;
+  color: #6d9cad;
 }
 
 /*******Grid and Media queries*************/
@@ -503,6 +505,9 @@ footer a:hover {
 
   .wildlife-img {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
   }
 
   #how-to-help>div {
@@ -548,102 +553,106 @@ footer a:hover {
     width: 60%;
     height: 55px;
     overflow: hidden;
-    background-color: rgba(50, 150, 200, 0.5);
+    background-color: rgba(50, 150, 200, 1.0);
   }
-
   .wave {
+    position: relative;
     box-sizing: border-box;
     width: 100px;
     height: 100px;
     border-radius: 50%/20%;
-    background-color: #ccf2ff;
+    background-color: rgba(204, 242, 255, 1.0);
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  .wave::before {
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%/20%;
+    background-color: rgba(204, 242, 255, 0.5);
+    animation: wave2 3000ms infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
   }
 
-  #wave-1 {
-    animation: wave1 3s infinite;
+  .wave::after {
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%/20%;
+    background-color: rgba(204, 242, 255, 0.5);
+    animation: wave2 3000ms infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   }
 
-  #wave-2 {
-    animation: wave1 3s infinite;
+  .wave-1 {
+    animation: wave1 3000ms infinite;
   }
 
-  #wave-3 {
-    animation: wave2 3s infinite;
+  .wave-2 {
+    animation: wave2 3000ms infinite;
   }
 
-  #wave-4 {
-    animation: wave2 3s infinite;
-  }
-
-  #wave-5 {
-    animation: wave3 3s infinite;
-  }
-
-  #wave-6 {
-    animation: wave3 3s infinite;
-  }
-
-  #wave-7 {
-    animation: wave3 3s infinite;
-  }
-
-  #wave-8 {
-    animation: wave2 3s infinite;
-  }
-
-  #wave-9 {
-    animation: wave2 3s infinite;
-  }
-
-  #wave-10 {
-    animation: wave1 3s infinite;
-  }
-
-  #wave-11 {
-    animation: wave1 3s infinite;
+  .wave-3 {
+    animation: wave3 3000ms infinite;
   }
 
   @keyframes wave1 {
     0% {
       border-radius: 0 0 40% 60%;
+      transform: translateY(5px);
     }
 
     50% {
       border-radius: 0 0 60% 40%;
+      transform: translateY(-5px);
     }
 
     100% {
       border-radius: 0 0 40% 60%;
+      transform: translateY(5px);
     }
   }
 
   @keyframes wave2 {
     0% {
       border-radius: 0 0 50% 70%;
+      transform: translateY(-5px)
     }
 
     50% {
       border-radius: 0 0 70% 50%;
+      transform: translateY(5px)
     }
 
     100% {
       border-radius: 0 0 50% 70%;
+      transform: translateY(-5px)
     }
   }
 
   @keyframes wave3 {
     0% {
       border-radius: 0 0 50% 70%;
+      transform: translateY(5px)
     }
 
     50% {
       border-radius: 0 0 70% 50%;
+      transform: translateY(-5px)
     }
 
     100% {
       border-radius: 0 0 50% 70%;
+      transform: translateY(5px)
     }
   }
 }
