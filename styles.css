@@ -1,314 +1,258 @@
 html {
-  width: 100%;
+  background-color: #00131a;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
-  background-color: #00131a;
   scroll-behavior: smooth; /*maybe causes screen freezes on mobile*/
+  width: 100%;
 }
-
 .outer-wrapper {
-  width: 98%;
-  margin: 0 auto;
   background-image: linear-gradient(#ccf2ff, #000);
   background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 98%;
 }
-
 .main_page_wrapper {
   padding: 5px;
 }
-
 .main_page_wrapper header {
   background-color: #ccf2ff;
 }
-
 h1 {
   color: #333;
   font-size: 3.5em;
   font-weight: lighter;
   text-transform: capitalize;
 }
-
 /****Wave container invisible on smaller screens****/
 #wave-container {
   display: none;
 }
-
 /***** Hamburger menu button*********/
 #menu {
   opacity: 0;
   /* so the default checkbox is not visible*/
 }
-
 label {
   font-size: 2em;
 }
-
 label.menu::before {
   content: "\f150";
   font-family: "Font Awesome 5 Free";
 }
-
 /***Nav hidden on small screen********/
 input[type=checkbox]:checked~nav {
   display: block;
 }
-
 input[type=checkbox]:checked~label.menu::before {
   content: "\f410";
   font-family: "Font Awesome 5 Free";
   transition: content 2s;
 }
-
 nav {
-  display: none;
   background-color: #37a;
+  display: none;
   height: auto;
   margin: 10px auto;
   width: 100%;
 }
-
 nav ul {
+  height: auto;
+  line-height: 50px;
   list-style: none;
   margin: 0;
   /* so it would strech the li items nicely*/
   padding: 0;
-  height: auto;
-  line-height: 50px;
   width: 100%;
 }
-
 li {
   background-color: #001a33;
-  flex: 1 1 auto;
-  /* so it would strech the li items nicely*/
-  text-align: center;
+  flex: 1 1 auto;   /* so it would strech the li items nicely*/
   font-size: 1.5em;
   height: 50px;
+  text-align: center;
   width: 100%;
 }
-
 li:hover {
   background-color: #6d9cad;
 }
-
 a {
   color: #ddd;
   display: block;
   /*Makes the whole li clickable*/
   text-decoration: none;
 }
-
 li a:hover {
   color: #333;
 }
-
-/******Search field*************/
-/* .search {
-  position: absolute;
-  top: 10px;
-  right:5px;
-  margin: 0;
-} */
 #item6 {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
-
 .search {
   display: flex;
   height: 30px;
 }
-
 .search input {
+  border: rgb(50, 100, 130);
   border: 2px solid rgba(50, 100, 130, 0.7);
-  ;
   line-height: 30px;
   width: 75%;
 }
-
 .search button {
+  background-color: rgb(50, 100, 130);
   background-color: rgba(50, 100, 130, 0.7);
   border: none;
   cursor: pointer;
   font-size: 1.5em;
   height: 30px;
   line-height: 30px;
-  width: 15%;
   outline-style: none;
+  width: 15%;
 }
-
 .search button:hover {
   background-color: #333;
   color: #ddd;
 }
-
 /*****Border style on main page******/
 .border-styling {
-  border-top: 2px solid #333;
   border-bottom: 2px solid #333;
-  border-right: 3px solid transparent;
   border-left: 3px solid transparent;
-  box-shadow: 5px 0px 10px grey;
+  border-right: 3px solid transparent;
+  border-top: 2px solid #333;
+  box-shadow: 5px 0 10px #808080;
 }
-
 /************Main****************/
 main {
   grid-area: main;
   height: auto;
   margin-top: 30px;
 }
-
 main article {
   height: 50%;
 }
-
 main article h2 {
-  text-decoration: underline;
   color: #333;
+  text-decoration: underline;
 }
-
 img.main-news-abstract {
-  width: 100px;
   float: left;
   margin: 5px;
+  width: 100px;
 }
-
 .main-news-abstract {
   color: #000;
+  font-size: 1em;
   padding: 5px 10px;
   text-align: justify;
-  font-size: 1em;
 }
-
 .main-news h2 {
-  grid-area: title;
-  text-transform: uppercase;
   font-size: 2.5em;
+  grid-area: title;
   padding-top: 100px;
+  text-transform: uppercase;
 }
-
 .main-news figure {
   display: block;
   grid-area: figure;
-  width: 95%;
   margin: 0 auto;
+  width: 95%;
 }
-
 .main-news div {
   grid-area: article;
 }
-
 .main-news p {
   padding: 5px 20px;
   text-align: justify;
 }
-
 .main-news p:first-child::first-letter {
   font-size: 250%;
 }
-
 .main-news figure img {
   width: 100%;
 }
-
 .main-news a {
   font-size: 2em;
 }
-
 .main-news i {
   color: #000;
 }
-
 /******Aside***/
 aside {
   color: #333;
   grid-area: aside;
-  margin-top: 30px;
   height: auto;
+  margin-top: 30px;
   width: 100%;
 }
-
 summary, a {
   outline: 0;
 }
-
 details {
-  margin-top: 30px;
   height: auto;
+  margin-top: 30px;
   width: auto;
 }
-
 details summary {
+  background-color: rgb(50, 150, 200);
   background-color: rgba(50, 150, 200, 1.0);
-  padding: 5px;
   cursor: pointer;
   font-weight: bold;
   height: 50px;
+  padding: 5px;
 }
-
 details>p {
   background-color: #001a33;
+  border: rgb(50, 100, 130);
   border: 2px solid rgba(50, 100, 130, 1.0);
   color: #eee;
   padding: 10px;
   text-align: justify;
 }
-
 details:nth-child(1)>p {
   position: relative;
   z-index: 6;
 }
-
 details:nth-child(2)>p {
   position: relative;
   z-index: 5;
 }
-
 details:nth-child(3)>p {
   position: relative;
   z-index: 4;
 }
-
 details:nth-child(4)>p {
   position: relative;
   z-index: 3;
 }
-
 details:nth-child(5)>p {
   position: relative;
   z-index: 4;
 }
-
 /********Wallpaper styles*******/
 .wallpaper {
-  width: 100%;
+  background-size: cover;
   height: 70px;
   margin: auto;
   margin-top: 70px;
-  background-size: cover;
+  width: 100%;
 }
-
 .wallpaper:first-of-type {
   position: absolute;
   z-index: 2;
 }
-
 #wallpaper_top {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/tim-marshall-82948-unsplash_banner.jpg);
 }
-
 #wallpaper_middle {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/vladimir-proskurovskiy-565471-unsplash_banner.jpg);
 }
-
 #wallpaper_bottom {
   background-image: url(https://raw.githubusercontent.com/lenuza/waves/master/images/wallpaper/mikita-amialkovic-254193-unsplash_banner.jpg);
 }
-
 /*******Sections*****************************/
 section {
   height: auto;
@@ -325,136 +269,116 @@ section p {
   flex-direction: row;
   font-size: 1.5em;
 }
-
 .section-header a {
   display: block;
   /*maybe not needed*/
   font-weight: bold;
   margin: 30px 10px;
 }
-
 .img-float-right {
   float: right;
-  width: 100px;
   margin: 5px;
+  width: 100px;
 }
-
 .img-float-left {
   float: left;
-  width: 100px;
   margin: 5px;
+  width: 100px;
 }
-
 .wildlife-img {
   display: none;
 }
-
 #about-us i {
   color: #000;
 }
-
 #wildlife, #wildlife i, #news, #news i {
   color: #ccc;
 }
-
 #how-to-help, #how-to-help i, #contacts, #contacts i {
   color: #ddd;
 }
-
 #how-to-help>div {
   column-count: 1;
 }
-
 #how-to-help>div>p {
   text-indent: 1em;
 }
-
 #how-to-help>div>p::first-letter {
   font-weight: bolder;
   text-transform: uppercase;
 }
-
-/****************************************/
+/************Footer**************************/
 footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   background-color: rgb(6, 11, 50);
   color: #ddd;
+  display: flex;
+  flex-direction: row;
+  grid-area: footer;
   height: 150px;
+  justify-content: flex-start;
   line-height: 150px;
 }
-
 footer a {
   color: #ddd;
   font-size: 2em;
   margin-left: 50px;
 }
-
 footer a:hover {
   color: #6d9cad;
 }
-
 /*******Grid and Media queries*************/
 @media screen and (min-width: 800px) {
 
   header {
-    grid-area: header;
-    display: flex;
     align-items: flex-end;
-    position: relative;
+    display: flex;
+    grid-area: header;
     margin-bottom: 20px;
+    position: relative;
   }
-
   h1 {
     font-size: 2.5em;
     height: 50%;
     line-height: 50px;
   }
-
   nav {
+    background-color: transparent;
     display: block;
     height: 50px;
-    width: 100%;
     margin: 0 auto;
     padding: 10px 0;
     position: relative;
-    background-color: transparent;
+    width: 100%;
   }
-
   nav ul {
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: space-evenly;
+    line-height: 50px;
     list-style: none;
-    margin: 0;
-    /* so it would strech the li items nicely*/
+    margin: 0;/* so it would strech the li items nicely*/
     padding: 0;
     width: 100%;
-    line-height: 50px;
-    height: 100px;
   }
-
   li {
     width: auto;
   }
-
   .main_page_wrapper {
     display: grid;
+    grid-row-gap: 30px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 150px auto;
-    grid-row-gap: 30px;
     grid-template-areas:
       " header header header header header header "
       " main main main main main main"
       "aside aside aside aside aside aside";
-    width: auto;
     height: auto;
-  }
+    width: auto;
 
+  }
   article.main-news {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -462,57 +386,46 @@ footer a:hover {
     grid-template-areas:
       "title figure figure"
       "article article article";
-    width: auto;
     margin: 10px auto;
     padding: 20px 10px;
+    width: auto;
   }
-
   .main-news:first-of-type {
     margin: 40px auto;
   }
-
   .main-news figure img {
     height: 280px;
   }
-
   #menu, .menu {
     display: none;
   }
-
   /*******Wavy Nav Bar********/
   #item1 {
     transform: rotate(5deg);
   }
-
   #item2 {
     transform: rotate(-5deg);
   }
-
   #item3 {
     transform: rotate(5deg);
   }
-
   #item4 {
+    align-self: flex-end;
     transform: rotate(5deg);
-    align-self: flex-end;
   }
-
   #item5 {
+    align-self: flex-end;
     transform: rotate(-5deg);
-    align-self: flex-end;
   }
-
   #item6 {
-    margin-top: 10px;
     align-self: flex-end;
+    margin-top: 10px;
   }
-
   .wildlife-img {
     align-items: flex-start;/*fixes chrome flexbox img ratio problem*/
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-
   }
   .wildlife-img img {
     width: 20%; /*fixes chrome flexbox img ratio problem*/
@@ -521,128 +434,115 @@ footer a:hover {
     column-count: 2;
   }
 }
-
 @media screen and (min-width:1040px) {
   .main_page_wrapper {
     display: grid;
+    grid-row-gap: 30px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 150px auto;
-    grid-row-gap: 30px;
     grid-template-areas:
       " header header header header header header "
       " main main main . aside aside";
-    width: auto;
     height: auto;
-  }
+    width: auto;
 
+  }
   #how-to-help>div {
     column-count: 4;
     column-rule-style: ridge;
     column-rule-width: 1px;
   }
-
   details {
     height: 50px;
   }
-
   /*Header wave animation**********/
   #wave-container {
-    position: absolute;
-    top: 75px;
-    right: 0;
+    align-items: flex-end;
+    background-color: rgb(50, 150, 200);
+    background-color: rgba(50, 150, 200, 1.0);
     display: block;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-end;
+    height: 55px;
     justify-content: stretch;
     margin: auto;
-    width: 60%;
-    height: 55px;
     overflow: hidden;
-    background-color: rgba(50, 150, 200, 1.0);
+    position: absolute;
+    right: 0;
+    top: 75px;
+    width: 60%;
   }
   .wave {
-    position: relative;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    background-color: rgb(204, 242, 255);
+    border-radius: 50%/20%;
     box-sizing: border-box;
-    width: 10%;
     height: 100px;
-    border-radius: 50%/20%;
-    background-color: rgba(204, 242, 255, 1.0);
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
+    position: relative;
+    width: 10%;
   }
-  .wave::before {
-    content: "";
-    position: absolute;
-    top:0;
-    right: 15%;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%/20%;
-    background-color: rgba(204, 242, 255, 0.5);
-    animation: wave2 3000ms infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-  }
-
   .wave-1 {
     animation: wave1 3000ms infinite;
   }
-
   .wave-2 {
     animation: wave2 3000ms infinite;
   }
-
   .wave-3 {
     animation: wave3 3000ms infinite;
   }
-
+  .wave::before {
+    animation: wave2 3000ms infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    background-color: rgb(204, 242, 255);
+    background-color: rgba(204, 242, 255, 0.5);
+    border-radius: 50%/20%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 15%;
+    top:0;
+    width: 100%;
+  }
   @keyframes wave1 {
     0% {
       border-radius: 0 0 40% 60%;
       transform: translateY(5px);
     }
-
     50% {
       border-radius: 0 0 60% 40%;
       transform: translateY(-5px);
     }
-
     100% {
       border-radius: 0 0 40% 60%;
       transform: translateY(5px);
     }
   }
-
   @keyframes wave2 {
     0% {
       border-radius: 0 0 50% 70%;
       transform: translateY(-5px)
     }
-
     50% {
       border-radius: 0 0 70% 50%;
       transform: translateY(5px)
     }
-
     100% {
       border-radius: 0 0 50% 70%;
       transform: translateY(-5px)
     }
   }
-
   @keyframes wave3 {
     0% {
       border-radius: 0 0 50% 70%;
       transform: translateY(5px)
     }
-
     50% {
       border-radius: 0 0 70% 50%;
       transform: translateY(-5px)
     }
-
     100% {
       border-radius: 0 0 50% 70%;
       transform: translateY(5px)
