@@ -230,7 +230,7 @@ details:nth-child(4)>p {
 }
 details:nth-child(5)>p {
   position: relative;
-  z-index: 4;
+  z-index: 2;
 }
 /********Wallpaper styles*******/
 .wallpaper {
